@@ -16,10 +16,15 @@ const getById = async (req, res) => {
 };
 
 const insertNewProduct = async (req, res) => {
+  if (Object.keys(req.body).length === 0) {
+    return res.status(400).json({ message: '"name" is required' });
+  }
   const newProduct = req.body;
+  if (newProduct.name.length < 5) {
+    return res.status(422).json({ message: '"name" length must be at least 5 characters long' });
+  }
   const result = await productService.insertNewProduct(newProduct);
 
-  // if (result.type) return res.status(result.type).json(result.message);
   return res.status(201).json(result.message);
 };
 
