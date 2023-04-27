@@ -44,7 +44,7 @@ describe('Product controller test', () => {
     sinon.stub(productService, 'getById').resolves();
 
     const req = {};
-    req.params = sinon.stub().returns({ id: 4 });
+    req.params = sinon.stub().returns({ id: 5 });
     const res = {};
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns();

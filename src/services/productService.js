@@ -12,4 +12,10 @@ const getById = async (id) => {
   return product;
 };
 
-module.exports = { getAllProducts, getById };
+const insertNewProduct = async (product) => {
+  const newProduct = await productModel.insertNewProduct(product);
+
+  return { type: null, message: newProduct };
+};
+
+module.exports = { getAllProducts, getById, insertNewProduct };

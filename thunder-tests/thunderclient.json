@@ -26,5 +26,24 @@
     "headers": [],
     "params": [],
     "tests": []
+  },
+  {
+    "_id": "35094071-20b3-4195-b6ba-684a393aed02",
+    "colId": "bd5116f6-b5db-41cd-95d5-f8566040c60d",
+    "containerId": "81d1b787-337e-48e4-8c97-3b7afd0fd3ad",
+    "name": "post new product",
+    "url": "http://localhost:3001/products",
+    "method": "POST",
+    "sortNum": 40000,
+    "created": "2023-04-27T17:31:57.513Z",
+    "modified": "2023-04-27T17:35:45.035Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"ProdutoY\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
