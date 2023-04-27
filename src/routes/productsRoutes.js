@@ -9,8 +9,4 @@ route.get('/:id', productController.getById);
 
 route.post('/', productController.insertNewProduct);
 
-// route.get('/:id', async () => {
-
-// });
-
 module.exports = route;
