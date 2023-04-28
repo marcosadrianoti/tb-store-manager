@@ -3,7 +3,9 @@ const connection = require('./connection');
 
 const getAllSales = async () => {
   const [sales] = await connection.execute(
-    'SELECT sale_id, date, product_id, quantity FROM StoreManager.sales_products, StoreManager.sales WHERE StoreManager.sales_products.sale_id = StoreManager.sales.id;',
+    `SELECT sale_id, date, product_id, quantity
+    FROM StoreManager.sales_products, StoreManager.sales
+    WHERE StoreManager.sales_products.sale_id = StoreManager.sales.id;`,
   );
   return sales;
 };
