@@ -47,8 +47,8 @@ const qtIsGreaterThanZero = (req, res, next) => {
 
 const isThereProductId = async (req, res, next) => {
   const sales = req.body;
-  let thereIs = true;
   const allProducts = await productModel.getAllProducts();
+  let thereIs = true;
   sales.forEach((sale) => {
     thereIs = allProducts.some((product) => product.id === sale.productId);
   });
