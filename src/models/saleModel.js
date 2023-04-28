@@ -1,44 +1,36 @@
 // const { date } = require('joi');
+const camelize = require('camelize');
 const connection = require('./connection');
 
 const getAllSales = async () => {
   const [sales] = await connection.execute(
     `SELECT sale_id, date, product_id, quantity
     FROM StoreManager.sales_products, StoreManager.sales
-    WHERE StoreManager.sales_products.sale_id = StoreManager.sales.id;`,
+    WHERE StoreManager.sales_products.sale_id = StoreManager.sales.id
+    ORDER BY sale_id ASC , product_id ASC;`,
   );
-  return sales;
+  return camelize(sales);
 };
 
-// const getById = async (id) => {
-//   const [[product]] = await connection.execute(
-//     'SELECT * FROM StoreManager.products WHERE products.id = ?;', [id],
-//   );
-//   return product;
-// };
-// [
-//   {
-//     "productId": 1,
-//     "quantity": 1
-//   },
-//   {
-//     "productId": 2,
-//     "quantity": 5
-//   }
-// ]
-// {
-//   "id": 3,
-  // "itemsSold": [
-  //   {
-  //     "productId": 1,
-  //     "quantity": 1
-  //   },
-  //   {
-  //     "productId": 2,
-  //     "quantity": 5
-  //   }
-  // ]
-// }
+const getById = async (id) => {
+  const [sale] = await connection.execute(
+    `SELECT date, product_id, quantity
+    FROM StoreManager.sales_products, StoreManager.sales
+    WHERE StoreManager.sales_products.sale_id = StoreManager.sales.id
+    AND StoreManager.sales_products.sale_id = (?);`, [id],
+  );
+  return camelize(sale);
+};
+
+const isThereSaleId = async (id) => {
+  const [[sale]] = await connection.execute(
+    `SELECT *
+    FROM StoreManager.sales
+    WHERE StoreManager.sales.id = (?); `, [id],
+  );
+  return sale;
+};
+
 const insertNewSale = async (sales) => {
   const dateNow = new Date();
   const [{ insertId }] = await connection.execute(
@@ -55,14 +47,7 @@ const insertNewSale = async (sales) => {
   });
   await Promise.all(promises);
 
-  // sales.forEach(async (sale) => {
-  //   await connection.execute(
-  //     'INSERT INTO StoreManager.sales_products (sale_id, product_id, quantity) VALUES (?,?,?);',
-  //     [saleId, sale.productId, sale.quantity],
-  //   );
-  // });
-
   return { id: insertId, itemsSold: sales };
 };
 
-module.exports = { insertNewSale, getAllSales };
+module.exports = { insertNewSale, getAllSales, getById, isThereSaleId };

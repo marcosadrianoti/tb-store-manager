@@ -18,6 +18,6 @@ route.post('/',
 
 route.get('/', saleController.getAllSales);
 
-// route.get('/:id', saleController.getById);
+route.get('/:id', saleController.getById);
 
 module.exports = route;

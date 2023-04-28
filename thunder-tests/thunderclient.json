@@ -83,5 +83,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "90c9f039-5368-4e99-8141-7fd16618e2cc",
+    "colId": "bd5116f6-b5db-41cd-95d5-f8566040c60d",
+    "containerId": "1433f227-b67f-4bda-a6f7-b21864913b51",
+    "name": "get sale by id",
+    "url": "http://localhost:3001/sales/3",
+    "method": "GET",
+    "sortNum": 60000,
+    "created": "2023-04-28T17:25:55.451Z",
+    "modified": "2023-04-28T18:46:53.097Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "[\n  {\n    \"productId\": 1,\n    \"quantity\": 1\n  },\n  {\n    \"productId\": 2,\n    \"quantity\": 5\n  }\n]",
+      "form": []
+    },
+    "tests": []
   }
 ]
