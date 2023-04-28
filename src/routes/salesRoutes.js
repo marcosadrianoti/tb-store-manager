@@ -16,4 +16,8 @@ route.post('/',
   isThereProductId,
   saleController.insertNewSale);
 
+route.get('/', saleController.getAllSales);
+
+// route.get('/:id', saleController.getById);
+
 module.exports = route;

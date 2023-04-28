@@ -1,10 +1,10 @@
 const saleModel = require('../models/saleModel');
 
-// const getAllProducts = async () => {
-//   const products = await productModel.getAllProducts();
+const getAllSales = async () => {
+  const sales = await saleModel.getAllSales();
 
-//   return products;
-// };
+  return sales;
+};
 
 // const getById = async (id) => {
 //   const product = await productModel.getById(id);
@@ -18,4 +18,4 @@ const insertNewSale = async (sale) => {
   return { type: null, message: newSale };
 };
 
-module.exports = { insertNewSale };
+module.exports = { insertNewSale, getAllSales };
