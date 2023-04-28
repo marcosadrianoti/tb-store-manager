@@ -49,7 +49,6 @@ describe('Product controller test', () => {
     res.status = sinon.stub().returns(res);
     res.json = sinon.stub().returns();
     await productController.getById(req, res);
-    console.log(req.params().id);
     expect(res.json).to.be.an('function');
     expect(res.status).to.be.an('function');
     expect(res.status).to.have.been.calledWith(404);
