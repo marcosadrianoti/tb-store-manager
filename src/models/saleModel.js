@@ -46,7 +46,6 @@ const insertNewSale = async (sales) => {
     );
   });
   await Promise.all(promises);
-
   return { id: insertId, itemsSold: sales };
 };
 
