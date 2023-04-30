@@ -102,5 +102,24 @@
       "form": []
     },
     "tests": []
+  },
+  {
+    "_id": "5cf8b8ce-ea84-4822-b647-546417312391",
+    "colId": "bd5116f6-b5db-41cd-95d5-f8566040c60d",
+    "containerId": "81d1b787-337e-48e4-8c97-3b7afd0fd3ad",
+    "name": "put new value name to product",
+    "url": "http://localhost:3001/products/1",
+    "method": "PUT",
+    "sortNum": 50000,
+    "created": "2023-04-30T11:46:35.028Z",
+    "modified": "2023-04-30T12:24:09.073Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"name\": \"Capa do Batman\"\n}",
+      "form": []
+    },
+    "tests": []
   }
 ]
