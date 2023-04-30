@@ -22,14 +22,14 @@ const getById = async (id) => {
   return camelize(sale);
 };
 
-const isThereSaleId = async (id) => {
-  const [[sale]] = await connection.execute(
-    `SELECT *
-    FROM StoreManager.sales
-    WHERE StoreManager.sales.id = (?); `, [id],
-  );
-  return sale;
-};
+// const isThereSaleId = async (id) => {
+//   const [[sale]] = await connection.execute(
+//     `SELECT *
+//     FROM StoreManager.sales
+//     WHERE StoreManager.sales.id = (?); `, [id],
+//   );
+//   return sale;
+// };
 
 const insertNewSale = async (sales) => {
   const dateNow = new Date();
@@ -49,4 +49,4 @@ const insertNewSale = async (sales) => {
   return { id: insertId, itemsSold: sales };
 };
 
-module.exports = { insertNewSale, getAllSales, getById, isThereSaleId };
+module.exports = { insertNewSale, getAllSales, getById };

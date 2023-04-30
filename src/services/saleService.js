@@ -7,11 +7,10 @@ const getAllSales = async () => {
 };
 
 const getById = async (id) => {
-  const isThereId = await saleModel.isThereSaleId(id);
-  if (isThereId === undefined) {
+  const sale = await saleModel.getById(id);
+  if (sale.length === 0) {
     return { type: null, message: 'Sale not found' };
   }
-  const sale = await saleModel.getById(id);
 
   return { type: 200, message: sale };
 };

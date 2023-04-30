@@ -22,5 +22,16 @@ describe('Product model test', () => {
     expect(result).to.be.an('object');
     expect(result.id).to.be.equal(4);
   });
+  it('Insert new product', async () => {
+    sinon.stub(connection, 'execute')
+      .resolves([{insertId: 4}]);
+
+    const body = {
+      name: 'Novo produto'
+    };
+    const result = await productModel.insertNewProduct(body);
+    expect(result.id).to.be.equal(4);
+    expect(result.name).to.be.equal('Novo produto');
+  });
 });
 
