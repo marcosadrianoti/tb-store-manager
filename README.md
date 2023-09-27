@@ -9,23 +9,23 @@ Projeto desenvolvido por mim durante o curso de Desenvolvimento Web na Trybe. Di
     * Desenvolver a API utilizando a arquitetura MSC `model-service-controller`.
     * Desenvolver uma API `RESTful`.
     * Utilizar o banco de dados `MySQL` para a gestão de dados.
+    * Escrever testes
 </details>
 <details>
 <summary><strong> Requisitos do projeto:</strong></summary>
 
-  * Criar o endpoint GET /talker.
-  * Criar o endpoint GET /talker/:id.
-  * Criar o endpoint POST /login.
-  * Adicionar as validações para o endpoint /login.
-  * Criar o endpoint POST /talker.
-  * Criar o endpoint PUT /talker/:id.
-  * Criar o endpoint DELETE /talker/:id.
-  * Criar o endpoint GET `/talker/search` e o parâmetro de consulta `q=searchTerm`.
-  * Requisitos Bônus:
-    * Criar no endpoint GET `/talker/search` o parâmetro de consulta `rate=rateNumber`.
-    * Criar no endpoint GET `/talker/search` o parâmetro de consulta `date=watchedDate`.
-    * Criar o endpoint PATCH `/talker/rate/:id`.
-    * Criar o endpoint GET `/talker/db`.
+  * Criar endpoints para listar produtos.
+  * Desenvolver testes que cubram no mínimo 5% de linhas e tenha no mínimo 2 funções escritas nas camadas da sua aplicação.
+  * Criar endpoint para cadastrar produtos.
+  * Criar validações para produtos.
+  * Desenvolver testes que cubram no mínimo 10% de linhas e tenha no mínimo 3 funções escritas nas camadas da sua aplicação.
+  * Criar endpoint para validar e cadastrar vendas.
+  * Desenvolver testes que cubram no mínimo 15% de linhas e tenha no mínimo 4 funções escritas nas camadas da sua aplicação.
+  * Criar endpoints para listar vendas.
+  * Desenvolver testes que cubram no mínimo 20% de linhas e tenha no mínimo 6 funções escritas nas camadas da sua aplicação.
+  * Criar endpoint para atualizar um produto.
+  * Desenvolver testes que cubram no mínimo 25% de linhas e tenha no mínimo 7 funções escritas nas camadas da sua aplicação.
+  * Criar endpoint para deletar um produto.
 </details>
   
 ## Rodando o projeto localmente
@@ -40,13 +40,13 @@ cd meu-diretorio
 Clone o projeto com o comando `git clone`:
 
 ```bash
-git clone git@github.com:marcosadrianoti/tb-talker-manager.git
+git clone git@github.com:marcosadrianoti/tb-store-manager.git
 ```
 
 Acesse o diretório do projeto com o comando `cd`:
 
 ```bash
-cd tb-talker-manager
+cd tb-store-manager
 ```
 
 Instale as dependências executando:
