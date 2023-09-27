@@ -4,10 +4,11 @@ Projeto desenvolvido por mim durante o curso de Desenvolvimento Web na Trybe. Di
 <details>
 <summary><strong>Objetivos do projeto:</strong></summary>
 
-  * Construir uma aplicação de cadastro de talkers (palestrantes) em que será possível cadastrar, visualizar, pesquisar, editar e excluir informações.
+  * Desenvolver uma API que é um sistema de gerenciamento de vendas no formato dropshipping em que será possível criar, visualizar, deletar e atualizar produtos e vendas.
   * Verificar se eu era capaz de:
-    * Desenvolver uma API de um CRUD (Create, Read, Update e Delete) de palestrantes (talkers).
-    * Desenvolver alguns endpoints que irão ler e escrever em um arquivo utilizando o módulo fs.
+    * Desenvolver a API utilizando a arquitetura MSC `model-service-controller`.
+    * Desenvolver uma API `RESTful`.
+    * Utilizar o banco de dados `MySQL` para a gestão de dados.
 </details>
 <details>
 <summary><strong> Requisitos do projeto:</strong></summary>
