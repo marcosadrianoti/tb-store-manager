@@ -9,7 +9,8 @@ Projeto desenvolvido por mim durante o curso de Desenvolvimento Web na Trybe. Di
     * Desenvolver a API utilizando a arquitetura MSC `model-service-controller`.
     * Desenvolver uma API `RESTful`.
     * Utilizar o banco de dados `MySQL` para a gestão de dados.
-    * Escrever testes
+    * Escrever testes.
+    * Usar o `Debugger` do `VScode`.
 </details>
 <details>
 <summary><strong> Requisitos do projeto:</strong></summary>
@@ -59,4 +60,11 @@ Execute a aplicação:
 
 ```bash
 npm run start
+```
+
+Para exercutar os teste:
+
+
+```bash
+npm run test:mocha
 ```
