@@ -56,6 +56,12 @@ Instale as dependências executando:
 npm install
 ```
 
+Com o Docker instalado em sua máquina, execute:
+
+```bash
+docker-compose up -d
+```
+
 Execute a aplicação:
 
 ```bash
